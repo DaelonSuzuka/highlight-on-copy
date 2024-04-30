@@ -25,6 +25,8 @@ export function activate(context: vscode.ExtensionContext) {
         color: foregroundColor || undefined,
       });
 
+      vscode.commands.executeCommand("editor.action.clipboardCopyAction");
+
       editor.setDecorations(decorationType, [...editor.selections]);
 
       // Remove decoration after specified timeout
